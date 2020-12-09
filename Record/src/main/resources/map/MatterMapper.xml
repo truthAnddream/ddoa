@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.dao.MatterDao">
+    <select id="getAll" resultType="Allpojo.Matter">
+        SELECT
+om.`mid`,
+ oe.`ename`,
+	ol.`star_date`,
+	ol.`end_date`,
+	ol.`days`,
+	ol.`ltype`
+
+FROM oa_matter om
+INNER JOIN oa_leave ol ON om.`lid`=ol.`lid`
+INNER JOIN oa_employee oe ON om.`eid`=oe.`eid`;
+    </select>
+
+    <delete id="deleteMatter">
+        delete from oa_matter where mid=#{mid}
+    </delete>
+</mapper>

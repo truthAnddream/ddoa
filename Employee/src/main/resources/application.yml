@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: employee
+#  cloud:
+#    config:
+#      discovery:
+#        enable: true
+#      serviceId: register-server
+#  datasource:
+#    type: com.alibaba.druid.pool.DruidDataSource
+#    url: jdbc:mysql://localhost:3306/tickoa?useSSL=true&serverTimezone=UTC&characterEncoding=UTF-8
+#    username: root
+#    password: zty199320
+##  mvc:
+#    view:
+#      prefix: /WEB-INF/user/
+#      suffix: .jsp
+#  thymeleaf:
+#    cache: false
+#  mail:
+#    host: smtp.qq.com
+#    username: 2500578486@qq.com
+#    password: focvpxvsevspeaid
+#    default-encoding: UTF-8
+#    properties:
+#      mail:
+#        smtp:
+#          auth: true
+#          starttls:
+#            enable: true
+#            required: true
+
+server:
+  port: 8702
+
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8000/eureka
+#  instance:
+#    prefer-ip-address: true
+#    hostname: ${spring.cloud.client.ip-address}
+#    instance-id: http://${spring.cloud.client.ip-address}:${server.port}
+#mybatis:
+#  #type-aliases-package: com.qf.pojo
+#  mapper-locations: classpath:map/*Mapper.xml

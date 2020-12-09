@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/AllPojo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cgrade/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Department/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Employee/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/EmployeeFei/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Massage/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MassageConsumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MassageServer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Record/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Student/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Subject/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

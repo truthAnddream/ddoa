@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.dao.LeaveDao">
+    <insert id="saveLeave">
+        insert into oa_leave values(null,#{star_date},#{end_date},#{ltype},#{days},#{ldesc})
+    </insert>
+</mapper>

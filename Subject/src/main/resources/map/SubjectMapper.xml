@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.dao.subjectdao">
+    <sql id="all">
+        select * from oa_subject
+    </sql>
+    <select id="getAllSubject" resultType="Allpojo.Subject">
+        <include refid="all"></include>
+    </select>
+    <select id="getSubjectBySid" resultType="Allpojo.Subject">
+        <include refid="all"></include>
+        where sid=#{sid}
+    </select>
+    <insert id="saveSubject">
+        insert into oa_subject values(null,#{sname},#{weeknum},#{begindate},#{types})
+    </insert>
+    <delete id="deleteSubjectBySid">
+        delete from oa_subject where sid = #{sid}
+    </delete>
+    <update id="updateSubject">
+        update oa_subject
+        set
+         sname=#{sname},weeknum=#{weeknum},begindate=#{begindate},types=#{types}
+        where sid = #{sid}
+    </update>
+
+</mapper>

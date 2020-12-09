@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.dao.IStudentdao">
+
+    <select id="getAllStudent" resultType="Allpojo.Student">
+       select u.uid,u.uname,oc.cname,u.sex,u.tel,u.email,u.schoolTag,u.eduback,u.birthday,u.borndate,u.QQ,u.IDcard,u.password from
+oa_students u inner join oa_cgrade oc on u.cname = oc.cname
+    </select>
+
+    <insert id="saveStudent">
+          insert into oa_students(uname,sex,tel,email,schoolTag,eduback,birthday,borndate,QQ,IDcard,password,cname) values(#{uname},#{sex},#{tel},#{email},#{schoolTag},#{eduback},#{birthday},#{borndate},#{QQ},#{IDcard},#{password},#{cname})
+    </insert>
+
+    <select id="selectStudentByUid" resultType="Allpojo.Student">
+select u.uid,u.uname,oc.cname,u.sex,u.tel,u.email,u.schoolTag,u.eduback,u.birthday,u.borndate,u.QQ,u.IDcard,u.password from
+    oa_students u inner join oa_cgrade oc on u.cname = oc.cname where uid=#{uid};
+
+    </select>
+
+<update id="updateStudent">
+          update oa_students set uname=#{uname},tel=#{tel},IDcard=#{IDcard}, password=#{password} where uid=#{uid}
+    </update>
+
+<delete id="deleteStudent">
+      delete from oa_students where uid=#{uid};
+    </delete>
+</mapper>

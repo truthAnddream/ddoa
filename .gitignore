@@ -1,0 +1,13 @@
+# Project exclude paths
+/AllPojo/target/
+/Cgrade/target/
+/config/target/
+/Department/target/
+/Employee/target/
+/EmployeeFei/target/
+/Massage/target/
+/MassageConsumer/target/
+/MassageServer/target/
+/Record/target/
+/Student/target/
+/Subject/target/

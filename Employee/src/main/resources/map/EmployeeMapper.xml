@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.employeedao.IEmployeeDao">
+    <select id="login" resultType="Allpojo.Employee">
+        select * from oa_employee where euser = #{euser} and epass = #{epass}
+    </select>
+    <select id="getAllEmp" resultType="Allpojo.Employee">
+        select emp.eid,emp.ename,emp.euser,emp.epass,emp.dname,emp.sex,emp.email,emp.qq,emp.tel,emp.joindate
+        from oa_employee as emp
+    </select>
+    <select id="getEmpByEid" resultType="Allpojo.Employee">
+        select emp.eid,emp.ename,emp.dname,emp.sex,emp.email,emp.qq,emp.tel,emp.joindate
+        from oa_employee as emp JOIN oa_department as dep
+        where emp.dname = dep.dname
+        and emp.eid=#{eid}
+    </select>
+    <delete id="deleteEmpByEid">
+        delete from oa_employee where eid = #{eid}
+    </delete>
+    <update id="updateEmp">
+        update oa_employee set
+            ename=#{ename},euser=#{euser},epass=#{epass},dname=#{dname},sex=#{sex},email=#{email},qq=#{qq},tel=#{tel},joindate=#{joindate}
+        where eid=#{eid}
+    </update>
+    <insert id="saveEmp">
+        insert into oa_employee(ename,euser,epass,dname,sex,email,qq,tel,joindate) values(#{ename},#{euser},#{epass},#{dname},#{sex},#{email},#{qq},#{tel},#{joindate})
+    </insert>
+    <select id="empCount" resultType="int">
+        select count(*) from oa_employee
+    </select>
+</mapper>

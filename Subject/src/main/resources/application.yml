@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: subject
+  cloud:
+    config:
+      discovery:
+        enable: true
+      serviceId: register-server
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/tickoa?useSSL=true&serverTimezone=UTC&characterEncoding=UTF-8
+    username: root
+    password: zty199320
+
+server:
+  port: 8703
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka
+  instance:
+    prefer-ip-address: true
+    hostname: ${spring.cloud.client.ip-address}
+    instance-id: http://${spring.cloud.client.ip-address}:${server.port}
+mybatis:
+  type-aliases-package: com.qf.pojo
+  mapper-locations: classpath:map/*Mapper.xml

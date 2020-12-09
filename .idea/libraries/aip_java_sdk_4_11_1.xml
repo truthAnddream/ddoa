@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="aip-java-sdk-4.11.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Employee/src/main/webapp/lib/aip-java-sdk-4.11.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Employee/src/main/webapp/lib/json-20160810.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Employee/src/main/webapp/lib/json-lib-2.4-jdk15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Employee/src/main/webapp/lib/sun.misc.BASE64Decoder.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

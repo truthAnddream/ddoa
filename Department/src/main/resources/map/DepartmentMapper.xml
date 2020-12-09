@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.dao.DepartmentDao">
+    <select id="getAll" resultType="Allpojo.Department">
+        select * from oa_department
+    </select>
+
+    <insert id="saveDep">
+        insert into oa_department values (null,#{dname},#{ddate})
+    </insert>
+
+    <delete id="deleteDep">
+        delete from oa_department where did=#{did}
+    </delete>
+
+    <update id="updateDep">
+        update oa_department set dname=#{dname},ddate=#{ddate} where did=#{did}
+    </update>
+
+    <select id="findDep" resultType="Allpojo.Department">
+        select * from oa_department where did=#{did}
+    </select>
+</mapper>

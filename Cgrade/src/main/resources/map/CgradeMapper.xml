@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.dao.ICgradedao">
+
+    <select id="getAllCgrade" resultType="Allpojo.Cgrade">
+select c.cid,c.cname,s.sname,c.cnumber,c.cweek,c.caddr,c.cstartdate from oa_cgrade c inner join oa_subject s on c.sname = s.sname
+
+    </select>
+
+    <insert id="saveCgrade">
+
+        insert into oa_cgrade(cname,sname,cnumber,cweek,caddr,cstartdate) values (#{cname},#{sname},
+                            #{cnumber},#{cweek},#{caddr},#{cstartdate})
+    </insert>
+
+    <select id="selectCrade" resultType="Allpojo.Cgrade">
+        select c.cid,c.cname,s.sname,c.cnumber,c.cweek,c.caddr,c.cstartdate from oa_cgrade c inner join oa_subject s on c.sname = s.sname where cid = #{cid}
+
+
+    </select>
+
+
+    <update id="updateCrade">
+ update oa_cgrade set cname=#{cname},sname=#{sname}, cnumber=#{cnumber},cweek=#{cweek},caddr=#{caddr} where cid=#{cid}
+
+    </update>
+
+    <delete id="deleteCrade">
+        delete from oa_cgrade where cid = #{cid}
+    </delete>
+</mapper>

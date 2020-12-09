@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.employeedao.MassageDao">
+    <select id="GetAllMassage" resultType="Allpojo.Massage">
+select u.eid,u.ename,u.dname,u.sex,u.tel,r.rdesc from oa_employee u
+                  inner  join emp_roles u2 on u.eid = u2.eid
+                  inner join roles r on u2.rid = r.rid
+                 where deleteid=#{deleteid};
+    </select>
+    <update id="MoveMassage">
+      update oa_employee set deleteid=#{deleteid} where eid=#{eid};
+    </update>
+    <delete id="delete">
+delete from emp_roles where eid=#{eid} ;
+delete from oa_matter where eid=#{eid} ;
+delete from oa_employee where eid=#{eid};
+    </delete>
+    <update id="Update">
+        update oa_employee set tel=#{tel},dname=#{dname},ename=#{ename} where eid=#{eid}
+    </update>
+</mapper>

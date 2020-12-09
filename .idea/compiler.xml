@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Cgradedao" />
+        <module name="Record" />
+        <module name="AllPojo" />
+        <module name="Employee" />
+        <module name="Department" />
+        <module name="EmployeeFei" />
+        <module name="MassageServer" />
+        <module name="Massage" />
+        <module name="MassageConsumer" />
+        <module name="Student" />
+        <module name="config" />
+        <module name="Subject" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Cgrade" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="AllPojo" options="-parameters" />
+      <module name="Cgrade" options="-parameters" />
+      <module name="Cgradedao" options="-parameters" />
+      <module name="Department" options="-parameters" />
+      <module name="Employee" options="-parameters" />
+      <module name="EmployeeFei" options="-parameters" />
+      <module name="Massage" options="-parameters" />
+      <module name="MassageConsumer" options="-parameters" />
+      <module name="MassageServer" options="-parameters" />
+      <module name="Record" options="-parameters" />
+      <module name="Student" options="-parameters" />
+      <module name="Subject" options="-parameters" />
+      <module name="config" options="-parameters" />
+    </option>
+  </component>
+</project>
